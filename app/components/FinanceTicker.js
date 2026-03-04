@@ -45,7 +45,7 @@ export default function FinanceTicker() {
     }, []);
 
     return (
-        <div className="relative bg-[#07112c] border-b border-[#d4af37]/20 shadow-[0_5px_15px_rgba(0,0,0,0.3)] z-[100] h-12 flex items-center overflow-hidden" dir="ltr">
+        <div className="fixed top-0 left-0 right-0 bg-[#07112c] border-b border-[#d4af37]/20 shadow-[0_5px_15px_rgba(0,0,0,0.3)] z-[100] h-12 flex items-center overflow-hidden" dir="ltr">
             {/* Live Indicator */}
             <div className="absolute left-0 top-0 bottom-0 z-20 flex items-center px-4 bg-gradient-to-r from-[#07112c] via-[#07112c] to-transparent border-r border-white/5 pr-12">
                 <div className="flex items-center gap-2 px-2.5 py-1 bg-white/5 rounded-full border border-white/10 backdrop-blur-sm">

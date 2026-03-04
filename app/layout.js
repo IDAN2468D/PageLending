@@ -6,6 +6,7 @@ import BackToTop from "./components/BackToTop";
 import CookieConsent from "./components/CookieConsent";
 import Toaster from "./components/Toaster";
 import FinanceTicker from "./components/FinanceTicker";
+import Navbar from "./components/Navbar";
 import SocialProof from "./components/SocialProof";
 import Script from "next/script";
 import { Heebo } from "next/font/google";
@@ -29,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="he" dir="rtl" className={heebo.className}>
+    <html lang="he" dir="rtl" className={heebo.className} suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#0c1c44" />
@@ -48,11 +49,12 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <FinanceTicker />
+        <Navbar />
         <ScrollProgress />
         <Toaster />
-        <div className="min-h-screen bg-transparent">
+        <div className="min-h-screen bg-transparent pt-12">
           {children}
           <ChatWidget />
           <WhatsAppButton />

@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { X, Gift, ArrowLeft } from "lucide-react";
+import { X, Gift, ArrowRight, ArrowLeft } from "lucide-react";
 import { submitLead } from "../actions/contact";
 import { toast } from "./Toaster";
 
@@ -98,10 +98,10 @@ export default function ExitIntentPopup() {
                             />
                             <button
                                 type="submit"
-                                className="w-full py-4 bg-[#d4af37] text-[#0c1c44] font-black text-lg rounded-xl hover:bg-[#c29f30] transition-all flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-[#d4af37] text-[#0c1c44] font-black text-lg rounded-xl hover:bg-[#c29f30] transition-all flex items-center justify-center gap-2 group"
                             >
                                 שלחו לי את המדריך
-                                <ArrowLeft className="w-5 h-5" />
+                                <ArrowRight className="w-5 h-5 rtl-flip" />
                             </button>
                         </form>
 

@@ -1,154 +1,147 @@
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Premium Typography & Tokens */
+
 :root {
   --foreground-rgb: 12, 28, 68;
   --background-start-rgb: 248, 250, 252;
   --background-end-rgb: 255, 255, 255;
-  --primary-color: #0c1c44;
-  --accent-color: #d4af37;
-  --card-bg: rgba(255, 255, 255, 0.7);
+  --gold-primary: #d4af37;
+  --gold-secondary: #f0cc60;
+  --blue-deep: #0c1c44;
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.4);
 }
 
 [data-theme='dark'] {
   --foreground-rgb: 248, 250, 252;
   --background-start-rgb: 15, 23, 42;
   --background-end-rgb: 2, 6, 23;
-  --primary-color: #d4af37;
-  --accent-color: #0c1c44;
-  --card-bg: rgba(15, 23, 42, 0.8);
+  --glass-bg: rgba(15, 23, 42, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
 }
 
 body {
+  font-family: 'Heebo', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      rgb(var(--background-start-rgb)),
-      rgb(var(--background-end-rgb)));
+  background: rgb(var(--background-start-rgb));
   direction: rtl;
   min-height: 100vh;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Scroll Progress Bar */
-.scroll-progress-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  z-index: 100;
-  background: transparent;
-}
-
-.scroll-progress-bar {
-  height: 100%;
-  background: linear-gradient(to left, #d4af37, #f0cc60);
-  width: 0%;
-  transition: width 0.1s ease;
-}
+/* --- Premium Utilities --- */
 
 @layer components {
-  .btn-primary {
-    @apply px-8 py-4 bg-[#d4af37] text-[#0c1c44] font-black rounded-lg transition-all duration-300 transform hover:scale-105 hover:bg-[#c29f30] hover:shadow-2xl shadow-lg active:scale-95 flex items-center justify-center gap-2;
+  .btn-gold {
+    @apply px-8 py-4 bg-gradient-to-r from-[#d4af37] to-[#f0cc60] text-[#0c1c44] font-black rounded-2xl transition-all duration-500 transform active:scale-95 flex items-center justify-center gap-3 relative overflow-hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
-  .glass-card {
-    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  .btn-gold:hover {
+    @apply scale-[1.03];
+    box-shadow: 0 20px 40px -15px rgba(212, 175, 55, 0.6);
+  }
+
+  .btn-gold::after {
+    @apply content-[''] absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-all duration-1000;
+  }
+
+  .btn-gold:hover::after {
+    @apply left-[100%];
+  }
+
+  .premium-glass {
+    @apply bg-white/70 dark:bg-slate-900/40 backdrop-blur-3xl border border-white/20 dark:border-white/5;
+    box-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.1);
+  }
+
+  .mesh-gradient {
+    background-color: #f8fafc;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(12, 28, 68, 0.05) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 100%, rgba(12, 28, 68, 0.05) 0px, transparent 50%);
+  }
+
+  .dark .mesh-gradient {
+    background-color: #020617;
+    background-image:
+      radial-gradient(at 0% 0%, rgba(212, 175, 55, 0.1) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(30, 58, 138, 0.15) 0px, transparent 50%);
   }
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+/* --- Animations --- */
 
-  to {
-    opacity: 1;
+@keyframes float {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Custom Scrollbar for Chat */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 6px;
+@keyframes pulse-gold {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 30px 10px rgba(212, 175, 55, 0);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
+.glow-gold {
+  animation: pulse-gold 3s infinite;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #0c1c4420;
-  border-radius: 10px;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #0c1c4440;
+::-webkit-scrollbar-track {
+  @apply bg-slate-50 dark:bg-slate-950;
 }
 
-/* RTL Specific Overrides */
-[dir="rtl"] .rtl-flip {
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-slate-800 rounded-full border-4 border-solid border-slate-50 dark:border-slate-950 hover:bg-[#d4af37];
+}
+
+/* Selection */
+::selection {
+  @apply bg-[#d4af37]/30 text-[#0c1c44] dark:text-white;
+}
+
+/* Smooth Navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* RTL Arrows mirroring */
+.rtl-flip {
+  @apply rtl:scale-x-[-1];
+}
+
+[dir="rtl"] .lucide-chevron-right,
+[dir="rtl"] .lucide-arrow-right,
+[dir="rtl"] .lucide-arrow-left,
+[dir="rtl"] .lucide-chevron-left {
   transform: scaleX(-1);
-}
-
-/* Perspective Utilities */
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-/* Social Proof slide-in animation */
-@keyframes slide-in {
-  0% {
-    transform: translateX(-110%);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-in {
-  animation: slide-in 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Chat Widget slide-in-from-bottom */
-@keyframes slide-in-from-bottom {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-in {
-  animation-fill-mode: both;
-}
-
-.fade-in {
-  animation-name: fadeIn;
-}
-
-.slide-in-from-bottom-5 {
-  animation-name: slide-in-from-bottom;
-}
-
-.duration-300 {
-  animation-duration: 300ms;
 }
