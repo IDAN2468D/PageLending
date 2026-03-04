@@ -36,6 +36,7 @@ const AiTaxRefunder = dynamic(() => import("./components/AiTaxRefunder"), { ssr:
 const AiKidsAllowance = dynamic(() => import("./components/AiKidsAllowance"), { ssr: false });
 const FAQ = dynamic(() => import("./components/FAQ"));
 const Calendly = dynamic(() => import("./components/Calendly"), { ssr: false });
+const ToolsNavigator = dynamic(() => import("./components/ToolsNavigator"), { ssr: false });
 
 /**
  * FinSmart Landing Page - Financial Advisor Edition
@@ -302,6 +303,9 @@ export default function Home() {
 
                 </div>
             </main>
+
+            {/* QUICK TOOLS NAVIGATOR */}
+            <ToolsNavigator />
 
             {/* PROCESS SECTION */}
             <section id="services" className="py-24 bg-white relative overflow-hidden">
