@@ -19,9 +19,9 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`fixed left-0 right-0 z-[60] transition-all duration-500 px-8 ${scrolled
+                className={`fixed left-0 right-0 z-[60] transition-all duration-500 px-6 md:px-8 ${scrolled
                     ? "top-[64px] mx-4 md:mx-auto max-w-6xl bg-white/80 dark:bg-slate-950/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-white/20 dark:border-white/5 rounded-3xl py-3"
-                    : "top-12 bg-transparent py-6"
+                    : "top-12 bg-transparent py-4 md:py-6"
                     }`}
             >
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -88,24 +88,39 @@ export default function Navbar() {
                         </div>
                     </div>
 
-                    <button className="md:hidden p-2 text-[#0c1c44] dark:text-white" onClick={() => setMobileMenuOpen(o => !o)}>
-                        {mobileMenuOpen ? <XIcon className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
-                    </button>
+                    <div className="flex items-center gap-4 md:hidden">
+                        <DarkModeToggle />
+                        <button className="p-2 text-[#0c1c44] dark:text-white" onClick={() => setMobileMenuOpen(true)}>
+                            <Menu className="w-8 h-8" />
+                        </button>
+                    </div>
                 </div>
             </nav>
 
-            {/* Mobile Menu Drawer */}
-            <div className={`fixed inset-0 z-[70] md:hidden transition-all duration-500 ${mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
-                <div className="absolute inset-0 bg-slate-950/20 backdrop-blur-md" onClick={() => setMobileMenuOpen(false)} />
-                <div className="absolute left-0 top-0 bottom-0 w-80 bg-white dark:bg-slate-950 p-10 flex flex-col gap-8 shadow-2xl">
-                    <span className="text-3xl font-black text-[#0c1c44] dark:text-white">Fin<span className="text-[#d4af37]">Smart</span></span>
-                    <nav className="flex flex-col gap-6 text-xl font-black text-[#0c1c44] dark:text-white text-right">
-                        <Link href="/#services" onClick={() => setMobileMenuOpen(false)}>שירותים</Link>
-                        <Link href="/pricing" onClick={() => setMobileMenuOpen(false)}>חבילות</Link>
-                        <Link href="/about" onClick={() => setMobileMenuOpen(false)}>אודות היועץ</Link>
-                        <Link href="/#diagnosis" onClick={() => setMobileMenuOpen(false)}>כלים חכמים</Link>
-                        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="text-[#d4af37]">צור קשר</Link>
-                    </nav>
+            {/* Premium Mobile Menu Overlay */}
+            <div className={`fixed inset-0 z-[100] md:hidden transition-all duration-500 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"}`}>
+                <div className="flex flex-col h-full">
+                    <div className="flex items-center justify-between p-6 mt-4">
+                        <div className="flex items-center gap-2">
+                            <span className="text-3xl font-black text-[#0c1c44] dark:text-white tracking-tighter">Fin<span className="text-[#d4af37]">Smart</span></span>
+                        </div>
+                        <button className="p-3 text-[#0c1c44] dark:text-white bg-slate-100 dark:bg-slate-800 rounded-full hover:scale-110 transition-transform" onClick={() => setMobileMenuOpen(false)}>
+                            <XIcon className="w-6 h-6" />
+                        </button>
+                    </div>
+
+                    <div className="flex-1 flex flex-col justify-center items-center gap-10 p-10">
+                        <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">שירותים</Link>
+                        <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">חבילות</Link>
+                        <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">אודות היועץ</Link>
+                        <Link href="/#diagnosis" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">כלים חכמים</Link>
+                    </div>
+
+                    <div className="p-10 mb-8 w-full">
+                        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="w-full flex justify-center text-xl btn-gold !py-5 shadow-2xl">
+                            תאמו פגישה עכשיו
+                        </Link>
+                    </div>
                 </div>
             </div>
         </>

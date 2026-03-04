@@ -46,7 +46,7 @@ export default function ToolsNavigator() {
                         </div>
 
                         {/* Scroller */}
-                        <div className="flex items-center gap-10 flex-nowrap">
+                        <div className="flex items-center gap-10 flex-nowrap pl-24">
                             {TOOLS.map((tool) => (
                                 <a
                                     key={tool.id}
@@ -56,7 +56,7 @@ export default function ToolsNavigator() {
                                     <div className="w-10 h-10 rounded-2xl bg-slate-50 dark:bg-slate-900 flex items-center justify-center group-hover:bg-[#d4af37] transition-all duration-500 shadow-sm border border-slate-100 dark:border-slate-800 group-hover:border-[#d4af37] group-hover:shadow-[0_10px_20px_-5px_rgba(212,175,55,0.4)]">
                                         <tool.icon className="w-4.5 h-4.5 text-slate-400 dark:text-slate-500 group-hover:text-white transition-colors rtl:scale-x-[-1]" />
                                     </div>
-                                    <span className="text-xs font-black text-slate-500 dark:text-slate-400 group-hover:text-[#0c1c44] dark:group-hover:text-[#d4af37] transition-colors tracking-tighter">{tool.name}</span>
+                                    <span className="text-xs font-black text-slate-500 dark:text-slate-400 group-hover:text-[#0c1c44] dark:group-hover:text-[#d4af37] transition-colors">{tool.name}</span>
                                 </a>
                             ))}
                         </div>

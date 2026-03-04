@@ -83,25 +83,25 @@ export default function Home() {
 
 
             {/* HERO SECTION */}
-            <header className="relative pt-40 pb-20 md:pt-64 md:pb-40 px-8">
-                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <header className="relative pt-32 pb-12 md:pt-64 md:pb-40 px-6 md:px-8">
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                     <div className="space-y-10 text-center lg:text-right relative z-10">
                         <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/50 dark:bg-white/10 premium-glass border-white/40 text-sm font-black text-[#d4af37] tracking-widest uppercase md:mx-0 mx-auto">
                             <ShieldCheck className="w-5 h-5 rtl-flip" />
                             ביטחון פיננסי ברמה הגבוהה ביותר
                         </div>
 
-                        <h1 className="text-6xl md:text-8xl font-black text-[#0c1c44] dark:text-white leading-[1] tracking-tighter">
+                        <h1 className="text-5xl lg:text-8xl font-black text-[#0c1c44] dark:text-white leading-[1.1] tracking-tighter">
                             תכננו את העתיד <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#f0cc60] drop-shadow-2xl">הכלכלי שלכם.</span>
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
+                        <p className="text-lg md:text-2xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
                             אלגוריתמים מתקדמים פוגשים ליווי אנושי מעולה. אנחנו לא רק מנהלים כספים; אנחנו בונים חופש אמיתי למשפחות הישראליות.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-6 pt-6 justify-center lg:justify-start">
-                            <a href="#contact" className="btn-gold text-lg w-full sm:w-auto px-12">
+                            <a href="#contact" className="btn-gold text-lg w-full max-w-[280px] sm:w-auto px-8 md:px-12 mx-auto lg:mx-0">
                                 בואו נתחיל
                                 <ArrowRight className="w-6 h-6 rtl-flip" />
                             </a>
@@ -153,11 +153,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto mt-32 relative z-10">
+                <div className="max-w-7xl mx-auto mt-20 md:mt-32 relative z-10">
                     <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-10 underline decoration-[#d4af37] underline-offset-8">הגופים המובילים שנתנו בנו אמון</p>
-                    <div className="flex flex-wrap justify-between items-center gap-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-500 px-4">
+                    <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-500 px-4 text-center">
                         {['Goldman Partners', 'Nexus Capital', 'Horizon Wealth', 'Elite Trust', 'Azure Banking'].map(l => (
-                            <span key={l} className="text-2xl font-black text-slate-600 dark:text-white cursor-default uppercase">{l}</span>
+                            <span key={l} className="text-2xl font-black text-slate-600 dark:text-white cursor-default uppercase w-1/2 md:w-auto mb-4 md:mb-0">{l}</span>
                         ))}
                     </div>
                 </div>
@@ -166,40 +166,40 @@ export default function Home() {
             <ToolsNavigator />
 
             {/* FEATURES BENTO GRID */}
-            <section id="services" className="py-32 px-8">
+            <section id="services" className="py-20 md:py-32 px-6 md:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20 text-right">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20 text-right">
                         <div className="space-y-4 max-w-2xl">
-                            <h2 className="text-5xl md:text-6xl font-black text-[#0c1c44] dark:text-white tracking-tighter">המעטפת <br /><span className="text-[#d4af37]">הפיננסית המושלמת.</span></h2>
+                            <h2 className="text-4xl md:text-6xl font-black text-[#0c1c44] dark:text-white tracking-tighter">המעטפת <br className="hidden md:block" /><span className="text-[#d4af37]">הפיננסית המושלמת.</span></h2>
                             <p className="text-lg text-slate-500 font-medium">מגוון פתרונות טכנולוגיים ואישיים המותאמים בדיוק לצרכים שלכם.</p>
                         </div>
-                        <a href="#contact" className="px-10 py-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl font-black text-sm hover:border-[#d4af37] transition-all shadow-sm">צפו בכל השירותים</a>
+                        <a href="#contact" className="px-10 py-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl font-black text-sm hover:border-[#d4af37] transition-all shadow-sm text-center">צפו בכל השירותים</a>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                        <div className="md:col-span-8 premium-glass p-12 rounded-[3.5rem] relative overflow-hidden group text-right">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+                        <div className="md:col-span-8 premium-glass p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] relative overflow-hidden group text-right">
                             <div className="relative z-10 space-y-6">
-                                <div className="w-16 h-16 rounded-2xl bg-[#0c1c44] dark:bg-[#d4af37]/20 flex items-center justify-center">
-                                    <PieChart className="w-8 h-8 text-[#d4af37]" />
+                                <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-[#0c1c44] dark:bg-[#d4af37]/20 flex items-center justify-center">
+                                    <PieChart className="w-6 h-6 md:w-8 md:h-8 text-[#d4af37]" />
                                 </div>
-                                <h3 className="text-4xl font-black text-[#0c1c44] dark:text-white">ניתוח נכסים כולל</h3>
-                                <p className="text-lg text-slate-500 max-w-md">המערכת שלנו מנתחת את כל פורטפוליו הנכסים שלכם—מפנסיה ועד נדל"ן—כדי למצוא הזדמנויות לצמיחה וייעוץ.</p>
+                                <h3 className="text-3xl md:text-4xl font-black text-[#0c1c44] dark:text-white">ניתוח נכסים כולל</h3>
+                                <p className="text-base md:text-lg text-slate-500 max-w-md">המערכת שלנו מנתחת את כל פורטפוליו הנכסים שלכם—מפנסיה ועד נדל"ן—כדי למצוא הזדמנויות לצמיחה וייעוץ.</p>
                                 <button className="btn-gold !px-8 !py-3 !text-xs !rounded-xl">הפעילו את המנתח</button>
                             </div>
                             <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-[#d4af37]/5 to-transparent -z-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                             <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#d4af37]/10 rounded-full blur-[80px]" />
                         </div>
-                        <div className="md:col-span-4 premium-glass p-12 rounded-[3.5rem] bg-[#0c1c44] dark:bg-slate-900 border-none text-right">
+                        <div className="md:col-span-4 premium-glass p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-[#0c1c44] dark:bg-slate-900 border-none text-right">
                             <div className="space-y-6">
-                                <div className="w-14 h-14 rounded-2xl bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37]">
-                                    <ShieldCheck className="w-7 h-7" />
+                                <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37]">
+                                    <ShieldCheck className="w-6 h-6 md:w-7 md:h-7" />
                                 </div>
-                                <h3 className="text-3xl font-black text-white">הגנה מלאה</h3>
-                                <p className="text-slate-400">הצפנה מתקדמת לכל המידע הפיננסי הרגיש שלכם. ביטחון ברמה בנקאית מוטמע ב-DNA שלנו.</p>
+                                <h3 className="text-2xl md:text-3xl font-black text-white">הגנה מלאה</h3>
+                                <p className="text-sm md:text-base text-slate-400">הצפנה מתקדמת לכל המידע הפיננסי הרגיש שלכם. ביטחון ברמה בנקאית מוטמע ב-DNA שלנו.</p>
                                 <div className="pt-8 flex items-center gap-4 justify-end">
-                                    <span className="text-xs font-bold text-slate-500 tracking-wide">+5k USERS</span>
+                                    <span className="text-[10px] md:text-xs font-bold text-slate-500 tracking-wide">+5k USERS</span>
                                     <div className="flex -space-x-3">
-                                        {[1, 2, 3, 4].map(i => <div key={i} className="w-10 h-10 rounded-full bg-slate-800 border-2 border-[#0c1c44]" />)}
+                                        {[1, 2, 3, 4].map(i => <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-800 border-2 border-[#0c1c44]" />)}
                                     </div>
                                 </div>
                             </div>
