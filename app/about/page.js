@@ -2,8 +2,8 @@ import Link from "next/link";
 import { ArrowLeft, LinkedIn, Mail, Phone, MapPin, Award, CheckCircle } from "lucide-react";
 
 export const metadata = {
-    title: "אודות היועץ | PageLending",
-    description: "הכירו את הצוות שמאחורי PageLending — הניסיון והחזון שלנו.",
+    title: "אודות היועץ | FinSmart",
+    description: "הכירו את הצוות שמאחורי FinSmart — הניסיון והחזון שלנו.",
 };
 
 export default function AboutPage() {
@@ -80,7 +80,7 @@ export default function AboutPage() {
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <Mail className="w-5 h-5 text-[#d4af37]" />
-                                    <span className="font-medium">chaim@pagelending.co.il</span>
+                                    <span className="font-medium">chaim@finsmart.co.il</span>
                                 </div>
                                 <div className="flex items-center gap-4">
                                     <MapPin className="w-5 h-5 text-[#d4af37]" />

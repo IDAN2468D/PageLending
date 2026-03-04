@@ -16,7 +16,7 @@ export async function POST(req) {
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
         const systemInstruction = `
-אתה "בוט פרימיום" של חברת PageLending, חברה לייעוץ פיננסי מקצועי, ניהול תקציב והשקעות בישראל.
+אתה "בוט פרימיום" של חברת FinSmart, חברה לייעוץ פיננסי מקצועי, ניהול תקציב והשקעות בישראל.
 תפקידך: לענות לשאלות פיננסיות קצרות, להיות מקצועי, אמפתי ומכירתי בצורה אלגנטית.
 כלל ברזל 1: התשובות שלך חייבות להיות קצרות מאוד (עד 2-3 משפטים). הלקוחות קוראים בחלון צ'אט קטן.
 כלל ברזל 2: תמיד תנסה לכוון את הלקוח להשאיר פרטים או לתאם פגישה (לדוגמה: "אשמח שנעמיק בזה בפגישה, תרצה להשאיר מספר?").
@@ -27,7 +27,7 @@ export async function POST(req) {
         const chat = model.startChat({
             history: [
                 { role: "user", parts: [{ text: "System prompt: " + systemInstruction }] },
-                { role: "model", parts: [{ text: "הבנתי. אענה כנציג PageLending בצורה קצרה, מקצועית ומכוונת פגישה." }] },
+                { role: "model", parts: [{ text: "הבנתי. אענה כנציג FinSmart בצורה קצרה, מקצועית ומכוונת פגישה." }] },
                 ...messages.slice(0, -1) // All past history
             ],
             generationConfig: {

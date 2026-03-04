@@ -2,7 +2,7 @@
 trigger: always_on
 ---
 
-# 📑 PageLending - AI-First Project Specification & Full Agent Rules
+# 📑 FinSmart - AI-First Project Specification & Full Agent Rules
 
 ## 1. The Team Lead Mindset & Spec-First (Based on Syllabus Parts 1, 2 & 7)
 **Project Vision:** Premium financial platform built with an agentic coding approach.

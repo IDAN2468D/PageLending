@@ -17,10 +17,10 @@ const heebo = Heebo({
 });
 
 export const metadata = {
-  title: "PageLending | ייעוץ פיננסי מקצועי",
+  title: "FinSmart | ייעוץ פיננסי מקצועי",
   description: "הדרך שלכם לחופש כלכלי מתחילה בייעוץ פיננסי חכם ומותאם אישית.",
   openGraph: {
-    title: "PageLending | ייעוץ פיננסי מקצועי",
+    title: "FinSmart | ייעוץ פיננסי מקצועי",
     description: "הדרך שלכם לחופש כלכלי מתחילה בייעוץ פיננסי חכם ומותאם אישית.",
     locale: "he_IL",
     type: "website",

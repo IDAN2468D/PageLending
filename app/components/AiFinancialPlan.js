@@ -72,7 +72,7 @@ export default function AiFinancialPlan() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16 space-y-6 relative z-10">
                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#d4af37]/30 bg-[#d4af37]/10 text-[#d4af37] text-sm font-bold shadow-[0_0_15px_rgba(212,175,55,0.2)]">
-                        <Cpu className="w-4 h-4" /> מערכת AI PageLending
+                        <Cpu className="w-4 h-4" /> מערכת AI FinSmart
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black">
                         בניית אסטרטגיה <span className="text-transparent bg-clip-text bg-gradient-to-l from-[#d4af37] to-[#f0cc60]">רובוטית וחכמה</span>

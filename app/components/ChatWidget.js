@@ -88,7 +88,7 @@ export default function ChatWidget() {
                                 <Bot className="w-6 h-6 text-[#0c1c44]" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-sm">נציג PageLending</h3>
+                                <h3 className="font-bold text-sm">נציג FinSmart</h3>
                                 <div className="flex items-center gap-1.5 mt-0.5">
                                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                                     <span className="text-[10px] text-white/70 font-medium">זמין כעת</span>

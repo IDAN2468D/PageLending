@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CheckCircle, ArrowLeft, ShieldCheck, Zap, Award } from "lucide-react";
 
 export const metadata = {
-    title: "חבילות ייעוץ | PageLending",
+    title: "חבילות ייעוץ | FinSmart",
     description: "בחרו את מסלול הליווי הפיננסי שמתאים בדיוק עבורכם.",
 };
 

@@ -27,7 +27,7 @@ export async function submitLead(formData) {
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         const prompt = `נתח את פניית הלקוח הבאה: "${data.message}". 
-הלקוח פנה לחברת "PageLending" שמייעצת פיננסית.
+הלקוח פנה לחברת "FinSmart" שמייעצת פיננסית.
 קבע ציון קושי או פוטנציאל עסקי בין 1-10 (איפה 10 זה לקוח בשל ורווחי מאוד).
 תמצת בחצי משפט 2 טיפים לאיך כדאי לדבר איתו בטלפון (למשל: לדבר על סיכונים, להרגיע אותו, וכו'). 
 החזר HTML בלבד (בלי תגיות \`\`\`html) עם עיצוב כזה:
@@ -49,7 +49,7 @@ export async function submitLead(formData) {
       subject: `ליד חדש באתר: ${data.name}`,
       html: `
         <div dir="rtl" style="font-family: sans-serif; padding: 20px;">
-          <h2 style="color: #0c1c44;">התקבל ליד חדש ב-PageLending!</h2>
+          <h2 style="color: #0c1c44;">התקבל ליד חדש ב-FinSmart!</h2>
           ${aiInsightsHtml}
           <p><strong>שם:</strong> ${data.name}</p>
           <p><strong>טלפון:</strong> ${data.phone}</p>
@@ -65,7 +65,7 @@ export async function submitLead(formData) {
     // 3. Send Confirmation Email to Client
     await sendEmail({
       to: data.email,
-      subject: `תודה שפנית ל-PageLending!`,
+      subject: `תודה שפנית ל-FinSmart!`,
       html: `
         <div dir="rtl" style="font-family: sans-serif; padding: 20px; text-align: right;">
           <h1 style="color: #0c1c44;">שלום ${data.name},</h1>
@@ -73,7 +73,7 @@ export async function submitLead(formData) {
           <p>בינתיים, אתה מוזמן לקרוא את המאמרים האחרונים שלנו בבלוג כדי להתחיל לקבל כלים כבר עכשיו.</p>
           <br />
           <p>בברכה,</p>
-          <p><strong>צוות PageLending</strong></p>
+          <p><strong>צוות FinSmart</strong></p>
         </div>
       `,
     });

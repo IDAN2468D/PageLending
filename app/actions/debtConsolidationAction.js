@@ -10,9 +10,9 @@ export async function analyzeDebts(debtsText) {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         const prompt = `
-אתה מומחה פיננסי לאיחוד הלוואות ב-PageLending.
+אתה מומחה פיננסי לאיחוד הלוואות ב-FinSmart.
 הלקוח הזין את החובות הבאים שלו: "${debtsText}".
-תפקידך להעריך (בהנחה שמרנית) את ההחזר החודשי הנוכחי שלו מכל אלה, ולהציע איחוד להלוואה אחת בתנאים נוחים יותר דרך PageLending.
+תפקידך להעריך (בהנחה שמרנית) את ההחזר החודשי הנוכחי שלו מכל אלה, ולהציע איחוד להלוואה אחת בתנאים נוחים יותר דרך FinSmart.
 החזר רק JSON במבנה הבא (ללא תגיות):
 {
   "current_monthly_payment": "ההחזר הנוכחי המשוער (מספר בשקלים)",
@@ -21,7 +21,7 @@ export async function analyzeDebts(debtsText) {
   "action_plan": [
     "סעיפי פעולה קצרים וברורים"
   ],
-  "message": "מסר מעודד שדוחף אותו ליצור קשר עם PageLending"
+  "message": "מסר מעודד שדוחף אותו ליצור קשר עם FinSmart"
 }
 `;
         const result = await model.generateContent(prompt);

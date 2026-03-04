@@ -33,7 +33,7 @@ const FAQ = dynamic(() => import("./components/FAQ"));
 const Calendly = dynamic(() => import("./components/Calendly"), { ssr: false });
 
 /**
- * PageLending Landing Page - Financial Advisor Edition
+ * FinSmart Landing Page - Financial Advisor Edition
  * Built for premium aesthetics and conversion.
  */
 
@@ -208,7 +208,7 @@ export default function Home() {
                         </h1>
 
                         <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-medium">
-                            נמאס לכם לרדוף אחרי המינוס? אנחנו ב-PageLending מציעים לכם ייעוץ פיננסי מקצועי, ליווי אישי בניהול תקציב, והשקעות חכמות. הצטרפו לאלפי משפחות שכבר שינו את עתידן הכלכלי.
+                            נמאס לכם לרדוף אחרי המינוס? אנחנו ב-FinSmart מציעים לכם ייעוץ פיננסי מקצועי, ליווי אישי בניהול תקציב, והשקעות חכמות. הצטרפו לאלפי משפחות שכבר שינו את עתידן הכלכלי.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
@@ -379,7 +379,7 @@ export default function Home() {
                                 </div>
                                 <img
                                     src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&q=80&w=1974"
-                                    alt="About PageLending"
+                                    alt="About FinSmart"
                                     className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
                                 />
                             </div>
@@ -402,7 +402,7 @@ export default function Home() {
                                 <div className="w-16 h-1.5 bg-[#d4af37] rounded-full" />
                             </div>
                             <p className="text-lg text-slate-600 leading-relaxed font-medium">
-                                ב-PageLending אנחנו מאמינים שכל אדם וכל משפחה יכולים להגיע לעצמאות כלכלית עם הכלים הנכונים.&rlm; הגישה שלנו משלבת ידע פיננסי עמוק יחד עם הבנה פסיכולוגית של הרגלי צריכה.
+                                ב-FinSmart אנחנו מאמינים שכל אדם וכל משפחה יכולים להגיע לעצמאות כלכלית עם הכלים הנכונים.&rlm; הגישה שלנו משלבת ידע פיננסי עמוק יחד עם הבנה פסיכולוגית של הרגלי צריכה.
                             </p>
                             <div className="space-y-4">
                                 {[
@@ -454,7 +454,7 @@ export default function Home() {
                                     </div>
                                     <div>
                                         <p className="text-xs text-white/50 uppercase font-bold">אימייל</p>
-                                        <p className="text-xl font-bold">office@pagelending.co.il</p>
+                                        <p className="text-xl font-bold">office@finsmart.co.il</p>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4">
@@ -569,7 +569,7 @@ export default function Home() {
 
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-100 dark:border-slate-800 gap-6">
                     <p className="text-slate-500 text-xs font-medium">
-                        © {new Date().getFullYear()} PageLending. כל הזכויות שמורות. מגדלי עזריאלי, תל אביב.
+                        © {new Date().getFullYear()} FinSmart. כל הזכויות שמורות. מגדלי עזריאלי, תל אביב.
                     </p>
                     <div className="flex items-center gap-6">
                         <div className="flex items-center gap-1 text-[#0c1c44] dark:text-white text-xs font-bold">

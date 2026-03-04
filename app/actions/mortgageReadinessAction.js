@@ -10,7 +10,7 @@ export async function planMortgage(equity, income) {
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         const prompt = `
-אתה יועץ משכנתאות של PageLending שמכין לקוחות לקבלת אישור עקרוני למשכנתא בעוד שנתיים (24 חודשים).
+אתה יועץ משכנתאות של FinSmart שמכין לקוחות לקבלת אישור עקרוני למשכנתא בעוד שנתיים (24 חודשים).
 ללקוח יש הון עצמי התחלתי של ${equity} ש"ח, ופנוי חודשי לחיסכון של ${income} ש"ח.
 תחשב ותחזיר JSON עם הנתונים הבאים (ללא markdown):
 {

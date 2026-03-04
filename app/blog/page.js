@@ -29,8 +29,8 @@ const posts = [
 ];
 
 export const metadata = {
-    title: "בלוג פיננסי | PageLending",
-    description: "מאמרים, טיפים ומדריכים מקצועיים לניהול כסף חכם ממוחות הכלכלה של PageLending.",
+    title: "בלוג פיננסי | FinSmart",
+    description: "מאמרים, טיפים ומדריכים מקצועיים לניהול כסף חכם ממוחות הכלכלה של FinSmart.",
 };
 
 export default function BlogPage() {
@@ -46,7 +46,7 @@ export default function BlogPage() {
                         ידע פיננסי מקצועי
                     </span>
                     <h1 className="text-5xl md:text-6xl font-black text-white leading-tight">
-                        בלוג <span className="text-[#d4af37]">PageLending</span>
+                        בלוג <span className="text-[#d4af37]">FinSmart</span>
                     </h1>
                     <p className="text-white/70 text-xl font-medium max-w-2xl mx-auto">
                         מאמרים, טיפים ומדריכים מקצועיים שיעזרו לכם לנהל את הכסף שלכם בחכמה

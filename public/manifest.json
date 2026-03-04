@@ -1,6 +1,6 @@
 {
-    "name": "PageLending",
-    "short_name": "PageLending",
+    "name": "FinSmart",
+    "short_name": "FinSmart",
     "description": "ייעוץ פיננסי מקצועי למשפחות ישראליות",
     "start_url": "/",
     "display": "standalone",

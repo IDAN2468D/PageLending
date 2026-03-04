@@ -32,7 +32,7 @@ export default function AiDebtConsolidator() {
                         מפזרים כספים על הלוואות קטנות? <span className="text-[#d4af37] underline decoration-[#d4af37]/30">בואו נאחד.</span>
                     </h2>
                     <p className="text-slate-600 font-medium max-w-2xl mx-auto text-lg pt-2 leading-relaxed">
-                        ספרו לנו על המינוס, הלוואת הרכב וכרטיסי האשראי שלכם. ה-AI שלנו יחשב איך איחוד שלהם להלוואה אחת ב-PageLending יחתוך לכם את ההחזר החודשי.
+                        ספרו לנו על המינוס, הלוואת הרכב וכרטיסי האשראי שלכם. ה-AI שלנו יחשב איך איחוד שלהם להלוואה אחת ב-FinSmart יחתוך לכם את ההחזר החודשי.
                     </p>
                 </div>
 

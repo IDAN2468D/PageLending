@@ -2,7 +2,7 @@ import Link from "next/link";
 import { CheckCircle, ArrowLeft, Calendar, Phone } from "lucide-react";
 
 export const metadata = {
-    title: "תודה! | PageLending",
+    title: "תודה! | FinSmart",
     description: "תודה שפניתם אלינו. נחזור אליכם בהקדם!",
 };
 

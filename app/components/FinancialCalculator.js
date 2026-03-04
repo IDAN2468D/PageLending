@@ -94,7 +94,7 @@ export default function FinancialCalculator() {
                         </div>
 
                         <div className="glass-card p-8 border-2 border-[#d4af37]/40">
-                            <p className="text-slate-500 font-bold text-sm uppercase tracking-wider mb-2">עם ייעוץ PageLending</p>
+                            <p className="text-slate-500 font-bold text-sm uppercase tracking-wider mb-2">עם ייעוץ FinSmart</p>
                             <p className="text-5xl font-black text-[#d4af37]">
                                 ₪{result.optimized.toLocaleString()}
                                 <span className="text-xl font-medium text-slate-400"> / חודש</span>
