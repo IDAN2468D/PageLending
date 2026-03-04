@@ -98,50 +98,86 @@ export default function Home() {
 
             {/* Navbar Container */}
             <nav
-                className={`fixed left-0 right-0 z-50 transition-all duration-300 px-6 py-4 ${scrolled ? "top-0 bg-white/80 backdrop-blur-lg shadow-md py-3" : "top-12 bg-transparent"
+                className={`fixed left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8 py-2 ${scrolled ? "top-0 bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl shadow-xl py-2" : "top-0 bg-white/40 dark:bg-slate-950/40 backdrop-blur-md py-3"
                     }`}
             >
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                        <span className="text-2xl font-black text-[#0c1c44] tracking-tight">
+                    <div className="flex items-center gap-6">
+                        <span className="text-xl md:text-2xl font-black text-[#0c1c44] dark:text-white tracking-tighter">
                             Fin<span className="text-[#d4af37]">Smart</span>
                         </span>
+
+                        {/* Short Desktop Menu Items - Directly visible */}
+                        <div className="hidden lg:flex items-center gap-4 text-xs font-bold mr-4 border-r border-slate-200 dark:border-slate-800 pr-4">
+                            <a href="#services" className="hover:text-[#d4af37] transition-colors uppercase tracking-wider">שירותים</a>
+                            <a href="/pricing" className="hover:text-[#d4af37] transition-colors uppercase tracking-wider">חבילות</a>
+                        </div>
                     </div>
 
-                    {/* Desktop Menu */}
-                    <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#0c1c44] dark:text-white/70">
-                        <a href="#services" className="hover:text-[#d4af37] transition-colors">שירותים</a>
+                    {/* Desktop Menu - Right Side Content */}
+                    <div className="hidden md:flex items-center gap-6">
                         <div className="relative group">
-                            <button className="flex items-center gap-1 hover:text-[#d4af37] transition-colors pb-1">כלים חכמים ▾</button>
-                            <div className="absolute top-full right-0 mt-2 bg-white dark:bg-slate-900 shadow-xl border border-slate-100 dark:border-slate-800 rounded-xl w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 flex flex-col translate-y-2 group-hover:translate-y-0 overflow-hidden z-50">
-                                <a href="#diagnosis" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">אבחון פיננסי</a>
-                                <a href="#ai-voice" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">היועץ הקולי</a>
-                                <a href="#ai-plan" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">התוכנית שלנו</a>
-                                <a href="#ai-time" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מכונת זמן</a>
-                                <a href="#calculator" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מחשבון חכם</a>
-                                <a href="#ai-subscriptions" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">צייד מנויים</a>
-                                <a href="#ai-case-study" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">סיפורי הצלחה AI</a>
-                                <a href="#ai-vacation" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מתכנן חופשות</a>
-                                <a href="#ai-debt" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מאחד הלוואות</a>
-                                <a href="#ai-mortgage" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מוכנות למשכנתא</a>
-                                <a href="#ai-freelance" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מייצב עצמאיים</a>
-                                <a href="#ai-receipt" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">סורק חשבוניות</a>
-                                <a href="#ai-pension" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">ביטול עמלות פנסיה</a>
-                                <a href="#ai-couples" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">המגשר הזוגי</a>
-                                <a href="#ai-challenge" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">אתגר ה-30 יום</a>
-                                <a href="#ai-car-lease" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">קונה או ליסינג?</a>
-                                <a href="#ai-salary" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מו"מ שכר</a>
-                                <a href="#ai-grocery" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מינימיזציית סופר</a>
-                                <a href="#ai-tax" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">בלש החזרי מס</a>
-                                <a href="#ai-kids" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-700 dark:text-slate-300">חינוך פיננסי לילדים</a>
+                            <button className="flex items-center gap-1.5 hover:text-[#d4af37] transition-all font-bold text-sm bg-slate-100 dark:bg-slate-800/50 px-3 py-1.5 rounded-lg border border-slate-200/50 dark:border-slate-700/50">
+                                🛸 כלים ומשאבים
+                                <ArrowLeft className="w-3 h-3 -rotate-90 transition-transform group-hover:rotate-0" />
+                            </button>
+                            <div className="absolute top-full left-0 mt-3 bg-white/98 dark:bg-slate-900/98 backdrop-blur-2xl shadow-[0_25px_70px_-15px_rgba(0,0,0,0.2)] border border-slate-100/50 dark:border-slate-800/50 rounded-2xl w-[480px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 flex flex-col translate-y-4 group-hover:translate-y-0 overflow-hidden z-50 p-6">
+                                <div className="grid grid-cols-2 gap-x-6 gap-y-1">
+                                    <div className="col-span-1 mb-2">
+                                        <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest block mb-2 px-1">AI Smart Tools</span>
+                                        <div className="flex flex-col gap-0.5">
+                                            {[
+                                                { id: "diagnosis", name: "אבחון פיננסי" },
+                                                { id: "ai-voice", name: "היועץ הקולי" },
+                                                { id: "ai-plan", name: "התוכנית שלנו" },
+                                                { id: "ai-time", name: "מכונת זמן" },
+                                                { id: "calculator", name: "מחשבון חכם" },
+                                                { id: "ai-subscriptions", name: "צייד מנויים" },
+                                                { id: "ai-case-study", name: "סיפורי הצלחה" },
+                                                { id: "ai-vacation", name: "מתכננן חופשות" },
+                                                { id: "ai-debt", name: "מאחד הלוואות" },
+                                                { id: "ai-mortgage", name: "משכנתא" }
+                                            ].map((tool) => (
+                                                <a key={tool.id} href={`#${tool.id}`} className="px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-[11px] font-bold text-slate-600 dark:text-slate-300 flex items-center gap-2">
+                                                    <span className="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600" />
+                                                    {tool.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="col-span-1">
+                                        <span className="text-[10px] font-black text-slate-400 dark:text-slate-500 uppercase tracking-widest block mb-2 px-1">More Features</span>
+                                        <div className="flex flex-col gap-0.5">
+                                            {[
+                                                { id: "ai-freelance", name: "מייצב עצמאיים" },
+                                                { id: "ai-receipt", name: "סורק חשבוניות" },
+                                                { id: "ai-pension", name: "מחסל עמלות" },
+                                                { id: "ai-couples", name: "המגשר הזוגי" },
+                                                { id: "ai-challenge", name: "אתגר 30 יום" },
+                                                { id: "ai-car-lease", name: "קונה או ליסינג?" },
+                                                { id: "ai-salary", name: "מו\"מ שכר" },
+                                                { id: "ai-grocery", name: "סופר חכם" },
+                                                { id: "ai-tax", name: "בלש החזרי מס" },
+                                                { id: "ai-kids", name: "חינוך פיננסי", special: true }
+                                            ].map((tool) => (
+                                                <a key={tool.id} href={`#${tool.id}`} className={`px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors text-[11px] font-bold ${tool.special ? 'text-[#d4af37]' : 'text-slate-600 dark:text-slate-300'} flex items-center gap-2`}>
+                                                    <span className={`w-1 h-1 rounded-full ${tool.special ? 'bg-[#d4af37]' : 'bg-slate-300 dark:bg-slate-600'}`} />
+                                                    {tool.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                        <div className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2">
+                                            <a href="/about" className="text-[11px] font-black text-slate-400 hover:text-[#d4af37] px-2 uppercase">אודות</a>
+                                            <a href="/blog" className="text-[11px] font-black text-slate-400 hover:text-[#d4af37] px-2 uppercase">בלוג</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <a href="/pricing" className="hover:text-[#d4af37] transition-colors">חבילות</a>
-                        <a href="/about" className="hover:text-[#d4af37] transition-colors">אודות</a>
-                        <a href="/blog" className="hover:text-[#d4af37] transition-colors">בלוג</a>
-                        <div className="flex items-center gap-4 mr-4 border-r border-slate-200 dark:border-slate-700 pr-4">
+
+                        <div className="flex items-center gap-3 mr-2 border-r border-slate-200 dark:border-slate-800 pr-4">
                             <DarkModeToggle />
-                            <a href="#contact" className="hover:text-[#d4af37] transition-colors font-bold px-5 py-2 rounded-full border border-[#0c1c44]/20 dark:border-[#d4af37]/20 hover:border-[#d4af37]">צור קשר</a>
+                            <a href="#contact" className="hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all bg-[#d4af37] text-[#0c1c44] px-6 py-2 rounded-full font-black text-sm">התחל עכשיו</a>
                         </div>
                     </div>
 
