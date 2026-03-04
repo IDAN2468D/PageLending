@@ -98,7 +98,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto flex items-center justify-between">
                     <div className="flex items-center gap-2">
                         <span className="text-2xl font-black text-[#0c1c44] tracking-tight">
-                            Page<span className="text-[#d4af37]">Lending</span>
+                            Fin<span className="text-[#d4af37]">Smart</span>
                         </span>
                     </div>
 
@@ -533,7 +533,7 @@ export default function Home() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     <div className="space-y-4">
                         <span className="text-2xl font-black text-[#0c1c44] dark:text-white tracking-tight">
-                            Page<span className="text-[#d4af37]">Lending</span>
+                            Fin<span className="text-[#d4af37]">Smart</span>
                         </span>
                         <p className="text-slate-500 text-sm leading-relaxed">
                             השותף שלכם לביטחון וצמיחה כלכלית. ליווי מקצועי, אישי ושקוף לכל משפחה בישראל.

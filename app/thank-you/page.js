@@ -16,7 +16,7 @@ export default function ThankYouPage() {
             <div className="max-w-2xl w-full text-center space-y-8">
                 {/* Logo */}
                 <Link href="/" className="inline-block text-3xl font-black text-[#0c1c44] tracking-tight">
-                    Page<span className="text-[#d4af37]">Lending</span>
+                    Fin<span className="text-[#d4af37]">Smart</span>
                 </Link>
 
                 {/* Success icon */}
