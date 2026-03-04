@@ -29,6 +29,11 @@ const AiReceiptScanner = dynamic(() => import("./components/AiReceiptScanner"), 
 const AiPensionNegotiator = dynamic(() => import("./components/AiPensionNegotiator"), { ssr: false });
 const AiCouplesMatcher = dynamic(() => import("./components/AiCouplesMatcher"), { ssr: false });
 const AiSavingsChallenge = dynamic(() => import("./components/AiSavingsChallenge"), { ssr: false });
+const AiCarLeasingVsBuying = dynamic(() => import("./components/AiCarLeasingVsBuying"), { ssr: false });
+const AiSalaryNegotiator = dynamic(() => import("./components/AiSalaryNegotiator"), { ssr: false });
+const AiGroceryOptimizer = dynamic(() => import("./components/AiGroceryOptimizer"), { ssr: false });
+const AiTaxRefunder = dynamic(() => import("./components/AiTaxRefunder"), { ssr: false });
+const AiKidsAllowance = dynamic(() => import("./components/AiKidsAllowance"), { ssr: false });
 const FAQ = dynamic(() => import("./components/FAQ"));
 const Calendly = dynamic(() => import("./components/Calendly"), { ssr: false });
 
@@ -122,7 +127,12 @@ export default function Home() {
                                 <a href="#ai-receipt" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">סורק חשבוניות</a>
                                 <a href="#ai-pension" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">ביטול עמלות פנסיה</a>
                                 <a href="#ai-couples" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">המגשר הזוגי</a>
-                                <a href="#ai-challenge" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-700 dark:text-slate-300">אתגר ה-30 יום</a>
+                                <a href="#ai-challenge" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">אתגר ה-30 יום</a>
+                                <a href="#ai-car-lease" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">קונה או ליסינג?</a>
+                                <a href="#ai-salary" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מו"מ שכר</a>
+                                <a href="#ai-grocery" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">מינימיזציית סופר</a>
+                                <a href="#ai-tax" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors border-b border-slate-50 dark:border-slate-800 text-slate-700 dark:text-slate-300">בלש החזרי מס</a>
+                                <a href="#ai-kids" className="px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-700 dark:text-slate-300">חינוך פיננסי לילדים</a>
                             </div>
                         </div>
                         <a href="/pricing" className="hover:text-[#d4af37] transition-colors">חבילות</a>
@@ -168,6 +178,11 @@ export default function Home() {
                                 <a href="#ai-pension" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">מחסל עמלות</a>
                                 <a href="#ai-couples" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">המגשר הזוגי</a>
                                 <a href="#ai-challenge" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">אתגר ה-30 יום</a>
+                                <a href="#ai-car-lease" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">קונה או ליסינג?</a>
+                                <a href="#ai-salary" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">מו"מ שכר</a>
+                                <a href="#ai-grocery" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">מינימיזציית סופר</a>
+                                <a href="#ai-tax" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">בלש החזרי מס</a>
+                                <a href="#ai-kids" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#d4af37] dark:text-slate-300">חינוך פיננסי לילדים</a>
                             </div>
                         </div>
 
@@ -358,6 +373,21 @@ export default function Home() {
 
             {/* AI SAVINGS CHALLENGE SECTION */}
             <div id="ai-challenge"><AiSavingsChallenge /></div>
+
+            {/* AI CAR LEASE VS BUYING SECTION */}
+            <div id="ai-car-lease"><AiCarLeasingVsBuying /></div>
+
+            {/* AI SALARY NEGOTIATOR SECTION */}
+            <div id="ai-salary"><AiSalaryNegotiator /></div>
+
+            {/* AI GROCERY OPTIMIZER SECTION */}
+            <div id="ai-grocery"><AiGroceryOptimizer /></div>
+
+            {/* AI TAX REFUNDER SECTION */}
+            <div id="ai-tax"><AiTaxRefunder /></div>
+
+            {/* AI KIDS ALLOWANCE SECTION */}
+            <div id="ai-kids"><AiKidsAllowance /></div>
 
             {/* TESTIMONIALS SECTION */}
             <div id="testimonials">
