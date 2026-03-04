@@ -32,25 +32,29 @@ const TOOLS = [
 
 export default function ToolsNavigator() {
     return (
-        <div className="sticky top-[72px] z-40 w-full py-2 pointer-events-none group/nav">
-            <div className="max-w-7xl mx-auto px-4 lg:px-6 flex justify-center">
-                <div className="bg-white/90 dark:bg-slate-950/90 backdrop-blur-3xl border border-white/40 dark:border-slate-800 shadow-[0_15px_60px_-15px_rgba(0,0,0,0.15)] rounded-full flex items-center gap-0.5 p-1 overflow-x-auto no-scrollbar pointer-events-auto max-w-full font-heebo scale-95 hover:scale-100 transition-transform duration-500">
-                    <div className="flex items-center shrink-0 pr-2 pl-3 border-l border-slate-200 dark:border-slate-800 ml-1">
-                        <div className="w-2 h-2 bg-[#d4af37] rounded-full animate-pulse mr-2 md:mr-0 ml-1" />
-                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest hidden md:block">AI SUITE</span>
-                    </div>
+        <div className="sticky top-[60px] md:top-[68px] z-40 w-full overflow-hidden transition-all duration-300">
+            <div className="bg-white/95 dark:bg-slate-950/80 backdrop-blur-2xl border-b border-slate-200/50 dark:border-slate-800/50 py-3 shadow-sm">
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex items-center gap-10 overflow-x-auto no-scrollbar scroll-smooth">
+                        <div className="shrink-0 flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 ml-6 pl-6">
+                            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-[#d4af37] hidden md:inline">Explorer</span>
+                            <div className="w-1.5 h-1.5 bg-[#d4af37] rounded-full animate-pulse shadow-[0_0_10px_#d4af37]" />
+                        </div>
 
-                    <div className="flex items-center shrink-0">
-                        {TOOLS.map((tool, i) => (
-                            <a
-                                key={tool.id}
-                                href={`#${tool.id}`}
-                                className="flex flex-col items-center justify-center p-2 rounded-full transition-all hover:bg-slate-100 dark:hover:bg-slate-800/80 group shrink-0 min-w-[64px]"
-                            >
-                                <tool.icon className="w-4 h-4 text-slate-400 group-hover:text-[#d4af37] transition-all duration-300 group-hover:scale-110" />
-                                <span className="text-[10px] font-bold text-slate-500 group-hover:text-[#0c1c44] dark:group-hover:text-white mt-0.5 whitespace-nowrap transition-colors">{tool.name}</span>
-                            </a>
-                        ))}
+                        <div className="flex items-center gap-10">
+                            {TOOLS.map((tool) => (
+                                <a
+                                    key={tool.id}
+                                    href={`#${tool.id}`}
+                                    className="flex items-center gap-2.5 whitespace-nowrap group transition-all"
+                                >
+                                    <div className="p-1.5 rounded-xl bg-slate-100 dark:bg-slate-800/50 group-hover:bg-[#d4af37]/20 border border-transparent group-hover:border-[#d4af37]/30 transition-all duration-300">
+                                        <tool.icon className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#d4af37] transition-colors" />
+                                    </div>
+                                    <span className="text-xs font-black text-slate-500 group-hover:text-[#0c1c44] dark:group-hover:text-white transition-colors tracking-tight">{tool.name}</span>
+                                </a>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
