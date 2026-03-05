@@ -280,6 +280,10 @@ export default function Home() {
                                     </div>
                                 </div>
                                 <div className="space-y-3">
+                                    <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">אימייל</label>
+                                    <input type="email" name="email" required className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" dir="ltr" placeholder="example@gmail.com" />
+                                </div>
+                                <div className="space-y-3">
                                     <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">הודעה</label>
                                     <textarea rows={4} name="message" className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold resize-none text-right" />
                                 </div>
