@@ -77,21 +77,21 @@ export default function ChatWidget() {
     };
 
     return (
-        <div className="fixed bottom-24 md:bottom-6 right-6 z-[100] flex flex-col items-end rtl">
+        <div className="fixed bottom-24 md:bottom-6 right-6 z-[100] flex flex-col items-end" dir="rtl">
             {/* Chat Window */}
             {isOpen && (
                 <div className="mb-4 w-[350px] sm:w-[400px] h-[500px] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in fade-in slide-in-from-bottom-5 duration-300 border border-slate-100">
                     {/* Header */}
                     <div className="bg-[#0c1c44] p-4 flex items-center justify-between text-white">
                         <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-[#d4af37] flex items-center justify-center shadow-lg">
-                                <Bot className="w-6 h-6 text-[#0c1c44]" />
+                            <div className="w-10 h-10 rounded-full bg-[#d4af37] flex items-center justify-center shadow-lg transform -rotate-6">
+                                <Bot className="w-6 h-6 text-[#0c1c44] rtl-flip" />
                             </div>
-                            <div>
+                            <div className="text-right">
                                 <h3 className="font-bold text-sm">נציג FinSmart</h3>
-                                <div className="flex items-center gap-1.5 mt-0.5">
+                                <div className="flex items-center gap-1.5 mt-0.5 justify-start">
                                     <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                                    <span className="text-[10px] text-white/70 font-medium">זמין כעת</span>
+                                    <span className="text-[10px] text-white/70 font-medium tracking-wide">זמין כעת</span>
                                 </div>
                             </div>
                         </div>
@@ -111,23 +111,23 @@ export default function ChatWidget() {
                                 className={`flex ${msg.sender === "user" ? "justify-start" : "justify-end"} items-end gap-2`}
                             >
                                 {msg.sender === "user" && (
-                                    <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center flex-shrink-0">
-                                        <User className="w-4 h-4 text-slate-600" />
+                                    <div className="w-8 h-8 rounded-full bg-[#0c1c44] flex items-center justify-center flex-shrink-0 shadow-md">
+                                        <User className="w-4 h-4 text-white" />
                                     </div>
                                 )}
 
                                 <div className={`max-w-[80%] p-3.5 rounded-2xl text-sm leading-relaxed shadow-sm text-right ${msg.sender === "user"
-                                    ? "bg-white text-[#0c1c44] rounded-br-none border border-slate-100"
-                                    : "bg-[#0c1c44] text-white rounded-bl-none"
-                                    }`} dir="rtl">
-                                    <p className="font-medium whitespace-pre-wrap">{msg.text}</p>
-                                    <p className={`text-[10px] mt-1.5 font-bold ${msg.sender === "user" ? "text-slate-400" : "text-white/50"}`}>
+                                    ? "bg-white border border-slate-200 text-[#0c1c44] rounded-br-none"
+                                    : "bg-[#0c1c44] text-white rounded-bl-none shadow-md"
+                                    }`}>
+                                    <p className="font-black whitespace-pre-wrap">{msg.text}</p>
+                                    <p className={`text-[10px] mt-1.5 font-bold ${msg.sender === "user" ? "text-slate-400" : "text-[#d4af37]"}`}>
                                         {msg.time}
                                     </p>
                                 </div>
 
                                 {msg.sender === "bot" && (
-                                    <div className="w-8 h-8 rounded-full bg-[#d4af37]/20 flex items-center justify-center flex-shrink-0 border border-[#d4af37]/30">
+                                    <div className="w-8 h-8 rounded-full bg-[#d4af37]/20 flex items-center justify-center flex-shrink-0 border border-[#d4af37]/30 shadow-sm">
                                         <Bot className="w-4 h-4 text-[#d4af37]" />
                                     </div>
                                 )}
@@ -137,9 +137,9 @@ export default function ChatWidget() {
                         {isTyping && (
                             <div className="flex justify-end items-end gap-2">
                                 <div className="max-w-[80%] p-4 rounded-2xl bg-[#0c1c44] rounded-bl-none shadow-sm flex items-center gap-1.5 h-[52px]">
-                                    <span className="w-2 h-2 rounded-full bg-white/40 animate-bounce" style={{ animationDelay: "0ms" }}></span>
-                                    <span className="w-2 h-2 rounded-full bg-white/40 animate-bounce" style={{ animationDelay: "150ms" }}></span>
-                                    <span className="w-2 h-2 rounded-full bg-white/40 animate-bounce" style={{ animationDelay: "300ms" }}></span>
+                                    <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-bounce" style={{ animationDelay: "0ms" }}></span>
+                                    <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-bounce" style={{ animationDelay: "150ms" }}></span>
+                                    <span className="w-2 h-2 rounded-full bg-[#d4af37] animate-bounce" style={{ animationDelay: "300ms" }}></span>
                                 </div>
                                 <div className="w-8 h-8 rounded-full bg-[#d4af37]/20 flex items-center justify-center flex-shrink-0 border border-[#d4af37]/30">
                                     <Bot className="w-4 h-4 text-[#d4af37]" />
@@ -157,34 +157,32 @@ export default function ChatWidget() {
                                 value={inputValue}
                                 onChange={(e) => setInputValue(e.target.value)}
                                 placeholder="הקלידו הודעה..."
-                                className="w-full pl-12 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#d4af37] focus:ring-4 focus:ring-[#d4af37]/5 transition-all text-sm font-medium text-[#0c1c44] text-right"
-                                dir="rtl"
+                                className="w-full pr-12 pl-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-[#d4af37] focus:ring-4 focus:ring-[#d4af37]/5 transition-all text-sm font-bold text-[#0c1c44] text-right"
                             />
                             <button
                                 type="submit"
-                                className="absolute left-2 top-1/2 -translate-y-1/2 p-2 text-[#d4af37] hover:bg-[#d4af37]/10 rounded-lg transition-all"
+                                className="absolute right-2 top-1/2 -translate-y-1/2 p-2 text-[#d4af37] hover:bg-[#d4af37]/10 rounded-lg transition-all"
                             >
                                 <Send className="w-5 h-5 rtl:rotate-180" />
                             </button>
                         </div>
                     </form>
                 </div>
-            )
-            }
+            )}
 
             {/* Toggle Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 hover:scale-110 active:scale-95 group relative ${isOpen ? "bg-white text-[#0c1c44] border border-slate-100" : "bg-[#0c1c44] text-white"
+                className={`w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-500 hover:scale-105 active:scale-95 group relative border-4 ${isOpen ? "bg-white text-[#0c1c44] border-slate-100" : "bg-[#0c1c44] text-[#d4af37] border-white/10"
                     }`}
             >
-                <div className="absolute inset-0 rounded-full bg-[#0c1c44] animate-ping opacity-20 group-hover:opacity-0 transition-opacity"></div>
+                <div className="absolute inset-0 rounded-full bg-[#d4af37] animate-ping opacity-20 group-hover:opacity-0 transition-opacity" style={{ animationDuration: '3s' }}></div>
                 {isOpen ? (
                     <X className="w-8 h-8 relative z-10" />
                 ) : (
-                    <MessageCircle className="w-8 h-8 relative z-10" />
+                    <MessageCircle className="w-8 h-8 relative z-10 rtl-flip" />
                 )}
             </button>
-        </div >
+        </div>
     );
 }

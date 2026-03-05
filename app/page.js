@@ -34,6 +34,8 @@ const AiSalaryNegotiator = dynamic(() => import("./components/AiSalaryNegotiator
 const AiGroceryOptimizer = dynamic(() => import("./components/AiGroceryOptimizer"), { ssr: false });
 const AiTaxRefunder = dynamic(() => import("./components/AiTaxRefunder"), { ssr: false });
 const AiKidsAllowance = dynamic(() => import("./components/AiKidsAllowance"), { ssr: false });
+const AiEmergencyFund = dynamic(() => import("./components/AiEmergencyFund"), { ssr: false });
+const AiDreamFunder = dynamic(() => import("./components/AiDreamFunder"), { ssr: false });
 const FAQ = dynamic(() => import("./components/FAQ"));
 const Calendly = dynamic(() => import("./components/Calendly"), { ssr: false });
 const ToolsNavigator = dynamic(() => import("./components/ToolsNavigator"), { ssr: false });
@@ -230,6 +232,8 @@ export default function Home() {
                 <div id="ai-grocery" className="px-8 max-w-7xl mx-auto"><AiGroceryOptimizer /></div>
                 <div id="ai-tax" className="px-8 max-w-7xl mx-auto"><AiTaxRefunder /></div>
                 <div id="ai-kids" className="px-8 max-w-7xl mx-auto"><AiKidsAllowance /></div>
+                <div id="ai-emergency" className="px-8 max-w-7xl mx-auto"><AiEmergencyFund /></div>
+                <div id="ai-dream" className="px-8 max-w-7xl mx-auto"><AiDreamFunder /></div>
                 <div id="testimonials" className="px-8 max-w-7xl mx-auto"><VideoTestimonials /></div>
             </div>
 

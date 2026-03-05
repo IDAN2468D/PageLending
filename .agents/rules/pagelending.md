@@ -47,3 +47,6 @@ When executing tasks, the AI must automatically adopt the relevant persona for t
 - **Accessibility:** Ensure high contrast between the Deep Blue text and Slate-50/White backgrounds.
 - **Security Risks:** ZERO secrets in Client Components. API keys and financial logic must remain server-side (Server Actions/Env Variables).
 - **Code Responsibility:** The AI cannot make final architecture decisions for financial calculations without human code review and approval.
+
+## 7. Chat Experience (RTL in IDE)
+- **RTL Chat wrapper:** Whenever you write Hebrew in the Antigravity chat, you MUST wrap everything in `<div dir="rtl">` and `</div>` to ensure proper Right-to-Left alignment directly in the IDE chat view.
