@@ -16,7 +16,7 @@ const TESTIMONIALS = [
         role: "זוג צעיר, ראשל\"צ",
         text: "הגענו עם בלאגן שלם בחשבונות. היום יש לנו תכנית כלכלית ברורה ל-10 השנים הבאות ודירה בדרך.",
         image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=200",
-        videoSrc: ""
+        videoSrc: "/success_story_2.mp4"
     },
     {
         name: "דוד לוי",
