@@ -98,26 +98,26 @@ export default function Navbar() {
             </nav>
 
             {/* Premium Mobile Menu Overlay */}
-            <div className={`fixed inset-0 z-[100] md:hidden transition-all duration-500 bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"}`}>
+            <div className={`fixed inset-0 z-[100] md:hidden transition-all duration-500 bg-white/95 dark:bg-slate-950/95 backdrop-blur-2xl ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"}`}>
                 <div className="flex flex-col h-full">
-                    <div className="flex items-center justify-between p-6 mt-4">
+                    <div className="flex items-center justify-between p-5 mt-2 border-b border-slate-100 dark:border-slate-800/50">
                         <div className="flex items-center gap-2">
-                            <span className="text-3xl font-black text-[#0c1c44] dark:text-white tracking-tighter">Fin<span className="text-[#d4af37]">Smart</span></span>
+                            <span className="text-2xl font-black text-[#0c1c44] dark:text-white tracking-tighter">Fin<span className="text-[#d4af37]">Smart</span></span>
                         </div>
-                        <button className="p-3 text-[#0c1c44] dark:text-white bg-slate-100 dark:bg-slate-800 rounded-full hover:scale-110 transition-transform" onClick={() => setMobileMenuOpen(false)}>
-                            <XIcon className="w-6 h-6" />
+                        <button className="p-2.5 text-[#0c1c44] dark:text-white bg-slate-100 dark:bg-slate-800 rounded-full hover:scale-110 transition-transform" onClick={() => setMobileMenuOpen(false)}>
+                            <XIcon className="w-5 h-5" />
                         </button>
                     </div>
 
-                    <div className="flex-1 flex flex-col justify-center items-center gap-10 p-10">
-                        <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">שירותים</Link>
-                        <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">חבילות</Link>
-                        <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">אודות היועץ</Link>
-                        <Link href="/#diagnosis" onClick={() => setMobileMenuOpen(false)} className="text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">כלים חכמים</Link>
+                    <div className="flex-1 flex flex-col justify-center items-center gap-8 p-8">
+                        <Link href="/#services" onClick={() => setMobileMenuOpen(false)} className="text-2xl sm:text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">שירותים</Link>
+                        <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="text-2xl sm:text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">חבילות</Link>
+                        <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-2xl sm:text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">אודות היועץ</Link>
+                        <Link href="/#diagnosis" onClick={() => setMobileMenuOpen(false)} className="text-2xl sm:text-3xl font-black text-[#0c1c44] dark:text-white hover:text-[#d4af37] transition-colors">כלים חכמים</Link>
                     </div>
 
-                    <div className="p-10 mb-8 w-full">
-                        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="w-full flex justify-center text-xl btn-gold !py-5 shadow-2xl">
+                    <div className="p-6 mb-6 w-full mt-auto">
+                        <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="w-full flex justify-center text-lg btn-gold !py-4 shadow-xl">
                             תאמו פגישה עכשיו
                         </Link>
                     </div>

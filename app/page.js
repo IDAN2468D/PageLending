@@ -85,15 +85,15 @@ export default function Home() {
 
 
             {/* HERO SECTION */}
-            <header className="relative pt-32 pb-12 md:pt-64 md:pb-40 px-6 md:px-8">
+            <header className="relative pt-28 pb-12 md:pt-48 md:pb-32 lg:pt-64 lg:pb-40 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-                    <div className="space-y-10 text-center lg:text-right relative z-10">
-                        <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/50 dark:bg-white/10 premium-glass border-white/40 text-sm font-black text-[#d4af37] tracking-widest uppercase md:mx-0 mx-auto">
-                            <ShieldCheck className="w-5 h-5 rtl-flip" />
+                    <div className="space-y-8 md:space-y-10 text-center lg:text-right relative z-10">
+                        <div className="inline-flex items-center gap-3 px-4 md:px-6 py-2 rounded-full bg-white/50 dark:bg-white/10 premium-glass border-white/40 text-xs md:text-sm font-black text-[#d4af37] tracking-widest uppercase md:mx-0 mx-auto">
+                            <ShieldCheck className="w-4 h-4 md:w-5 md:h-5 rtl-flip" />
                             ביטחון פיננסי ברמה הגבוהה ביותר
                         </div>
 
-                        <h1 className="text-5xl lg:text-8xl font-black text-[#0c1c44] dark:text-white leading-[1.1] tracking-tighter">
+                        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black text-[#0c1c44] dark:text-white leading-[1.1] tracking-tighter">
                             תכננו את העתיד <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4af37] to-[#f0cc60] drop-shadow-2xl">הכלכלי שלכם.</span>
                         </h1>
@@ -115,15 +115,15 @@ export default function Home() {
                             </a>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-8 pt-12 border-t border-slate-200 dark:border-slate-800/50">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 pt-8 sm:pt-12 border-t border-slate-200 dark:border-slate-800/50">
                             {[
                                 { label: "שביעות רצון", val: "100%" },
                                 { label: "נכסים מנוהלים", val: "₪2.5B+" },
                                 { label: "משפחות מרוצות", val: "5000+" }
                             ].map((s, i) => (
-                                <div key={i} className="space-y-1">
-                                    <p className="text-2xl md:text-3xl font-black text-[#0c1c44] dark:text-white">{s.val}</p>
-                                    <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{s.label}</p>
+                                <div key={i} className="space-y-1 bg-white/50 dark:bg-slate-900/50 sm:bg-transparent rounded-2xl py-4 sm:py-0 border border-slate-100 dark:border-slate-800 sm:border-none shadow-sm sm:shadow-none premium-glass sm:bg-none sm:backdrop-blur-none sm:border-none">
+                                    <p className="text-3xl md:text-3xl font-black text-[#0c1c44] dark:text-white">{s.val}</p>
+                                    <p className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">{s.label}</p>
                                 </div>
                             ))}
                         </div>
@@ -155,11 +155,11 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="max-w-7xl mx-auto mt-20 md:mt-32 relative z-10">
-                    <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-10 underline decoration-[#d4af37] underline-offset-8">הגופים המובילים שנתנו בנו אמון</p>
-                    <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-10 opacity-30 grayscale hover:grayscale-0 transition-all duration-500 px-4 text-center">
+                <div className="max-w-7xl mx-auto mt-16 md:mt-32 relative z-10 px-4 md:px-0">
+                    <p className="text-center text-[10px] font-black text-slate-400 uppercase tracking-[0.4em] mb-8 md:mb-10 underline decoration-[#d4af37] underline-offset-8">הגופים המובילים שנתנו בנו אמון</p>
+                    <div className="grid grid-cols-2 md:flex md:flex-wrap md:justify-between items-center gap-6 md:gap-10 opacity-40 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-500 text-center">
                         {['Goldman Partners', 'Nexus Capital', 'Horizon Wealth', 'Elite Trust', 'Azure Banking'].map(l => (
-                            <span key={l} className="text-2xl font-black text-slate-600 dark:text-white cursor-default uppercase w-1/2 md:w-auto mb-4 md:mb-0">{l}</span>
+                            <span key={l} className="text-md sm:text-xl md:text-2xl font-black text-[#0c1c44] dark:text-white cursor-default uppercase">{l}</span>
                         ))}
                     </div>
                 </div>
@@ -168,37 +168,37 @@ export default function Home() {
             <ToolsNavigator />
 
             {/* FEATURES BENTO GRID */}
-            <section id="services" className="py-20 md:py-32 px-6 md:px-8">
+            <section id="services" className="py-16 md:py-32 px-4 md:px-8">
                 <div className="max-w-7xl mx-auto">
-                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-20 text-right">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8 mb-12 md:mb-20 text-right">
                         <div className="space-y-4 max-w-2xl">
                             <h2 className="text-4xl md:text-6xl font-black text-[#0c1c44] dark:text-white tracking-tighter">המעטפת <br className="hidden md:block" /><span className="text-[#d4af37]">הפיננסית המושלמת.</span></h2>
-                            <p className="text-lg text-slate-500 font-medium">מגוון פתרונות טכנולוגיים ואישיים המותאמים בדיוק לצרכים שלכם.</p>
+                            <p className="text-base md:text-lg text-slate-500 font-medium">מגוון פתרונות טכנולוגיים ואישיים המותאמים בדיוק לצרכים שלכם.</p>
                         </div>
-                        <a href="#contact" className="px-10 py-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl font-black text-sm hover:border-[#d4af37] transition-all shadow-sm text-center">צפו בכל השירותים</a>
+                        <a href="#contact" className="px-8 md:px-10 py-4 md:py-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl font-black text-sm hover:border-[#d4af37] transition-all shadow-sm text-center">צפו בכל השירותים</a>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-                        <div className="md:col-span-8 premium-glass p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] relative overflow-hidden group text-right">
+                        <div className="md:col-span-8 premium-glass p-8 sm:p-10 md:p-12 rounded-[2rem] md:rounded-[3.5rem] relative overflow-hidden group text-right">
                             <div className="relative z-10 space-y-6">
                                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-[#0c1c44] dark:bg-[#d4af37]/20 flex items-center justify-center">
                                     <PieChart className="w-6 h-6 md:w-8 md:h-8 text-[#d4af37]" />
                                 </div>
-                                <h3 className="text-3xl md:text-4xl font-black text-[#0c1c44] dark:text-white">ניתוח נכסים כולל</h3>
-                                <p className="text-base md:text-lg text-slate-500 max-w-md">המערכת שלנו מנתחת את כל פורטפוליו הנכסים שלכם—מפנסיה ועד נדל"ן—כדי למצוא הזדמנויות לצמיחה וייעוץ.</p>
-                                <button className="btn-gold !px-8 !py-3 !text-xs !rounded-xl">הפעילו את המנתח</button>
+                                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-[#0c1c44] dark:text-white">ניתוח נכסים כולל</h3>
+                                <p className="text-sm md:text-lg text-slate-500 max-w-md leading-relaxed">המערכת שלנו מנתחת את כל פורטפוליו הנכסים שלכם—מפנסיה ועד נדל"ן—כדי למצוא הזדמנויות לצמיחה וייעוץ.</p>
+                                <button className="btn-gold !px-6 sm:!px-8 !py-3 !text-xs !rounded-xl w-full sm:w-auto">הפעילו את המנתח</button>
                             </div>
-                            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-[#d4af37]/5 to-transparent -z-0 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-bl from-[#d4af37]/5 to-transparent -z-0 opacity-0 md:group-hover:opacity-100 transition-opacity" />
                             <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-[#d4af37]/10 rounded-full blur-[80px]" />
                         </div>
-                        <div className="md:col-span-4 premium-glass p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-[#0c1c44] dark:bg-slate-900 border-none text-right">
+                        <div className="md:col-span-4 premium-glass p-8 sm:p-10 md:p-12 rounded-[2rem] md:rounded-[3.5rem] bg-[#0c1c44] dark:bg-slate-900 border-none text-right">
                             <div className="space-y-6">
                                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-[#d4af37]/20 flex items-center justify-center text-[#d4af37]">
                                     <ShieldCheck className="w-6 h-6 md:w-7 md:h-7" />
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-black text-white">הגנה מלאה</h3>
-                                <p className="text-sm md:text-base text-slate-400">הצפנה מתקדמת לכל המידע הפיננסי הרגיש שלכם. ביטחון ברמה בנקאית מוטמע ב-DNA שלנו.</p>
-                                <div className="pt-8 flex items-center gap-4 justify-end">
+                                <h3 className="text-2xl sm:text-3xl md:text-3xl font-black text-white">הגנה מלאה</h3>
+                                <p className="text-sm md:text-base text-slate-400 leading-relaxed">הצפנה מתקדמת לכל המידע הפיננסי הרגיש שלכם. ביטחון ברמה בנקאית מוטמע ב-DNA שלנו.</p>
+                                <div className="pt-6 sm:pt-8 flex items-center gap-4 justify-end">
                                     <span className="text-[10px] md:text-xs font-bold text-slate-500 tracking-wide">+5k USERS</span>
                                     <div className="flex -space-x-3">
                                         {[1, 2, 3, 4].map(i => <div key={i} className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-800 border-2 border-[#0c1c44]" />)}
@@ -211,7 +211,7 @@ export default function Home() {
             </section>
 
             {/* AI SECTIONS CONTAINER */}
-            <div className="space-y-40 py-20">
+            <div className="space-y-24 md:space-y-40 py-16 md:py-20">
                 <div id="diagnosis" className="px-8 max-w-7xl mx-auto"><DiagnosisForm /></div>
                 <div id="ai-voice" className="px-8 max-w-7xl mx-auto"><AiVoiceAnalyzer /></div>
                 <div id="ai-plan" className="px-8 max-w-7xl mx-auto"><AiFinancialPlan /></div>
@@ -240,26 +240,26 @@ export default function Home() {
             <Calendly />
 
             {/* CONTACT SECTION REIMAGINED */}
-            <section id="contact" className="py-40 px-8 relative overflow-hidden">
-                <div className="max-w-7xl mx-auto premium-glass rounded-[4rem] p-16 md:p-24 relative overflow-hidden flex flex-col lg:flex-row gap-20 items-center">
+            <section id="contact" className="py-20 md:py-40 px-4 md:px-8 relative overflow-hidden">
+                <div className="max-w-7xl mx-auto premium-glass rounded-[2rem] md:rounded-[4rem] p-8 sm:p-12 md:p-16 lg:p-24 relative overflow-hidden flex flex-col lg:flex-row gap-12 md:gap-20 items-center">
                     <div className="relative z-10 lg:w-1/2 text-right">
-                        <h2 className="text-5xl md:text-7xl font-black text-[#0c1c44] dark:text-white leading-[1] mb-10">
+                        <h2 className="text-4xl sm:text-5xl md:text-7xl font-black text-[#0c1c44] dark:text-white leading-[1] mb-8 md:mb-10 tracking-tighter">
                             בנו את המורשת <br />
                             <span className="text-[#d4af37]">הכלכלית</span> שלכם היום.
                         </h2>
-                        <div className="space-y-8">
+                        <div className="space-y-6 md:space-y-8">
                             {[
                                 { i: Phone, t: "התקשרו אלינו", v: "077-8001234" },
                                 { i: Mail, t: "שלחו מייל", v: "vip@finsmart.io" },
                                 { i: MapPin, t: "בואו לבקר", v: "מגדלי עזריאלי, תל אביב" }
                             ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-6 group justify-end">
+                                <div key={idx} className="flex items-center gap-4 md:gap-6 group justify-end bg-white/40 dark:bg-slate-800/20 sm:bg-transparent p-4 sm:p-0 rounded-2xl sm:rounded-none border border-white/50 dark:border-white/5 sm:border-none premium-glass sm:bg-none sm:backdrop-blur-none sm:border-none">
                                     <div className="text-right">
-                                        <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{item.t}</p>
-                                        <p className="text-2xl font-black text-[#0c1c44] dark:text-white">{item.v}</p>
+                                        <p className="text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest">{item.t}</p>
+                                        <p className="text-xl md:text-2xl font-black text-[#0c1c44] dark:text-white mt-1">{item.v}</p>
                                     </div>
-                                    <div className="w-16 h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center group-hover:bg-[#d4af37] transition-colors group-hover:text-white text-[#d4af37]">
-                                        <item.i className="w-8 h-8 rtl-flip" />
+                                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl bg-white dark:bg-slate-800 shadow-lg flex items-center justify-center group-hover:bg-[#d4af37] transition-colors group-hover:text-white text-[#d4af37] border border-slate-100 dark:border-slate-700">
+                                        <item.i className="w-5 h-5 md:w-8 md:h-8 rtl-flip" />
                                     </div>
                                 </div>
                             ))}
@@ -267,27 +267,27 @@ export default function Home() {
                     </div>
 
                     <div className="lg:w-1/2 relative z-10 w-full">
-                        <div className="bg-white dark:bg-slate-900 p-12 rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800">
-                            <form className="space-y-8 text-right" onSubmit={handleFormSubmit}>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                                    <div className="space-y-3">
-                                        <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">שם מלא</label>
-                                        <input type="text" name="name" required className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" />
+                        <div className="bg-white dark:bg-slate-900 p-8 sm:p-12 rounded-[2rem] md:rounded-[2.5rem] shadow-2xl border border-slate-100 dark:border-slate-800">
+                            <form className="space-y-6 md:space-y-8 text-right" onSubmit={handleFormSubmit}>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
+                                    <div className="space-y-2 md:space-y-3">
+                                        <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2">שם מלא</label>
+                                        <input type="text" name="name" required className="w-full px-5 py-4 md:px-6 md:py-5 rounded-xl md:rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" />
                                     </div>
-                                    <div className="space-y-3">
-                                        <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">טלפון</label>
-                                        <input type="tel" name="phone" required className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" />
+                                    <div className="space-y-2 md:space-y-3">
+                                        <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2">טלפון</label>
+                                        <input type="tel" name="phone" required className="w-full px-5 py-4 md:px-6 md:py-5 rounded-xl md:rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" />
                                     </div>
                                 </div>
-                                <div className="space-y-3">
-                                    <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">אימייל</label>
-                                    <input type="email" name="email" required className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" dir="ltr" placeholder="example@gmail.com" />
+                                <div className="space-y-2 md:space-y-3">
+                                    <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2">אימייל</label>
+                                    <input type="email" name="email" required className="w-full px-5 py-4 md:px-6 md:py-5 rounded-xl md:rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold text-right" dir="ltr" placeholder="example@gmail.com" />
                                 </div>
-                                <div className="space-y-3">
-                                    <label className="text-xs font-black text-slate-400 uppercase tracking-widest px-2">הודעה</label>
-                                    <textarea rows={4} name="message" className="w-full px-6 py-5 rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold resize-none text-right" />
+                                <div className="space-y-2 md:space-y-3">
+                                    <label className="text-[10px] md:text-xs font-black text-slate-500 uppercase tracking-widest px-2">הודעה</label>
+                                    <textarea rows={4} name="message" className="w-full px-5 py-4 md:px-6 md:py-5 rounded-xl md:rounded-2xl bg-slate-50 dark:bg-slate-800 border-none outline-none focus:ring-2 focus:ring-[#d4af37] transition-all font-bold resize-none text-right" />
                                 </div>
-                                <button disabled={isSubmitting} className="btn-gold w-full text-xl !py-6">
+                                <button disabled={isSubmitting} className="btn-gold w-full text-lg md:text-xl !py-4 md:!py-6">
                                     {isSubmitting ? "מבצע שידור..." : "בקשו שיחת ייעוץ Elite"}
                                 </button>
                             </form>
@@ -297,7 +297,7 @@ export default function Home() {
             </section>
 
             {/* FAQ */}
-            <div className="max-w-7xl mx-auto px-8 py-20">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 py-16 md:py-20">
                 <FAQ />
             </div>
 
