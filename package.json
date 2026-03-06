@@ -19,7 +19,6 @@
     "lucide-react": "^0.576.0",
     "mongoose": "^9.2.3",
     "next": "latest",
-    "nodemailer": "^8.0.1",
     "react": "latest",
     "react-dom": "latest",
     "recharts": "^3.7.0",
